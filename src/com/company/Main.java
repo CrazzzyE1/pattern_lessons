@@ -1,12 +1,12 @@
 package com.company;
 
-import com.company.hw3.CatBuilderExample;
-import com.company.hw3.CloneExample;
-import com.company.hw3.SingletonExample;
 import com.company.hw4.Cat;
 import com.company.hw4.CatDecorator;
 import com.company.hw4.RealCat;
 import com.company.hw4.SuperMoveDecorator;
+import com.company.hw5.Button;
+import com.company.hw5.Lamp;
+import com.company.hw5.SwitchInRoom;
 
 public class Main {
 
@@ -36,5 +36,13 @@ public class Main {
 //// Builder
 //        Cat cat = new CatBuilderExample().name("Tommy").color("White").age(5).build();
 //        System.out.println(cat);
+//        hw 5
+        Lamp lamp = new Lamp();
+        SwitchInRoom switchInRoom = new SwitchInRoom(lamp);
+        Button button = new Button(switchInRoom);
+        button.press();
+        button.press();
+        button.press();
+        button.press();
     }
 }
